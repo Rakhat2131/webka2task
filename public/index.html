@@ -1,0 +1,49 @@
+<!-- public/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css" /> <!-- Your custom stylesheet -->
+</head>
+<body>
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-6">
+        <label for="cityInput">Enter City:</label>
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" id="cityInput">
+          <div class="input-group-append">
+            <button class="btn btn-primary" onclick="getWeatherAndNews()">Get Weather and News</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt-4">
+      <div class="col-md-6">
+        <div id="weatherInfo"></div>
+      </div>
+      <div class="col-md-6">
+        <p>News and facts</p>
+        <div id="newsInfo"></div>
+      </div>
+    </div>
+
+    <div class="row mt-4">
+      <div class="col-md-12">
+        <div id="map" style="height: 300px;"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoM6tWIbI9J" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+WyOtkD++xyB3XXpPmSdBC&5QFZ2Nao/N" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="front.js"></script>
+</body>
+</html>
